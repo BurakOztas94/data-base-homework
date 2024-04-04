@@ -1,0 +1,33 @@
+--1 - Retrieve all data from the first_name column in the actor and customer tables.
+
+SELECT first_name FROM actor
+UNION
+SELECT first_name FROM customer;
+
+--2- Retrieve the intersecting data from the first_name column in the actor and customer tables.
+
+SELECT first_name FROM actor
+INTERSECT
+SELECT first_name FROM customer;
+
+--3- Retrieve the data from the first_name column in the actor table that does not exist in the customer table.
+
+SELECT first_name FROM actor
+EXCEPT
+SELECT first_name FROM customer;
+--4- Repeat the first 3 queries for duplicate records.
+
+-- Retrieve all data, including duplicates
+SELECT first_name FROM actor
+UNION ALL
+SELECT first_name FROM customer;
+
+-- Retrieve intersecting data, including duplicates
+SELECT first_name FROM actor
+INTERSECT ALL
+SELECT first_name FROM customer;
+
+-- Retrieve data from the actor table that does not exist in the customer table, including duplicates
+SELECT first_name FROM actor
+EXCEPT ALL
+SELECT first_name FROM customer;
