@@ -1,0 +1,15 @@
+1- Retrieve country names from the country column of the country table where the name starts with the character 'A' and ends with the character 'a'.
+
+SELECT country FROM country WHERE country LIKE 'A%a';
+
+2- Retrieve country names from the country column of the country table where the name consists of at least 6 characters and ends with the character 'n'.
+
+SELECT country FROM country WHERE LENGTH(country) >= 6 AND country LIKE '%n';
+
+3- Retrieve film titles from the title column of the film table where the title contains the character 'T' regardless of case, at least four times.
+
+SELECT title FROM film WHERE title ILIKE '%T%T%T%T%';
+
+4- Retrieve all data from all columns of the film table where the title starts with the character 'C', has a length greater than 90, and a rental_rate of 2.99.
+
+SELECT * FROM film WHERE title LIKE 'C%' AND LENGTH(title) > 90 AND rental_rate = 2.99;
