@@ -10,15 +10,13 @@ GROUP BY replacement_cost
 HAVING COUNT(*) > 50;
 
 3- List the number of customers corresponding to each store_id value in the customer table.
-sql
-Copy code
+
 SELECT store_id, COUNT(*) AS customer_count 
 FROM customer 
 GROUP BY store_id;
 
 4- Find the country_id value that has the highest number of cities when the city data in the city table is grouped by the country_id.
-sql
-Copy code
+
 SELECT country_id, COUNT(*) AS city_count 
 FROM city 
 GROUP BY country_id 
