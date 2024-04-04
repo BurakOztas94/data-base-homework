@@ -1,0 +1,13 @@
+1- Calculate the average value of the rental_rate column in the film table.
+
+SELECT AVG(rental_rate) AS average_rental_rate FROM film;
+
+SELECT COUNT(*) AS film_count FROM film WHERE title LIKE 'C%';
+
+2- Determine the length of the longest film with a rental_rate value equal to 0.99 in the film table.
+
+SELECT MAX(length) AS longest_film_length FROM film WHERE rental_rate = 0.99;
+
+3- Count the number of distinct replacement_cost values for films with a length greater than 150 minutes in the film table.
+
+SELECT COUNT(DISTINCT replacement_cost) AS distinct_replacement_cost_count FROM film WHERE length > 150;
