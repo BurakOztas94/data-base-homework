@@ -1,0 +1,11 @@
+1- Retrieve the top 5 longest films (in terms of length) ending with the character 'n' in the film table.
+
+SELECT * FROM film WHERE title LIKE '%n' ORDER BY length DESC LIMIT 5;
+
+2- Retrieve the second set of 5 shortest films (in terms of length) ending with the character 'n' in the film table. The lengths of films are in the range of 6 to 10.
+
+SELECT * FROM film WHERE title LIKE '%n' ORDER BY length ASC LIMIT 5 OFFSET 5;
+
+3- Retrieve the first 4 records ordered by last_name in descending order from the customer table where the store_id is 1.
+
+SELECT * FROM customer WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
