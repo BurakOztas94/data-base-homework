@@ -1,0 +1,24 @@
+-- Create the Employee table
+CREATE TABLE Employee (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(50),
+    birthday DATE,
+    email VARCHAR(100)
+);
+
+-- Insert 50 records into the Employee table (assuming data is obtained from Mockaroo)
+-- Replace the VALUES with actual data obtained from Mockaroo
+INSERT INTO Employee (id, name, birthday, email) VALUES
+(1, 'John Doe', '1990-05-15', 'john.doe@example.com'),
+(2, 'Jane Smith', '1985-09-20', 'jane.smith@example.com'),
+... -- Add other 48 records here;
+
+-- Update operations based on each column
+-- For example, let's update the first row
+UPDATE Employee SET name = 'Michael Brown' WHERE id = 1;
+UPDATE Employee SET birthday = '1988-03-25' WHERE id = 1;
+UPDATE Employee SET email = 'michael.brown@example.com' WHERE id = 1;
+
+-- Delete operations based on each column
+-- For example, let's delete the row with id = 1
+DELETE FROM Employee WHERE id = 1;
